@@ -1,3 +1,5 @@
+from typing import List
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -9,7 +11,7 @@ class Plot:
         self.df = pd.read_json(json_file)
         self.save_dir = Path('plots')
 
-    def draw_plots(self):
+    def draw_plots(self) -> list[Path]:
 
         plot_paths = []
 
